@@ -21,7 +21,7 @@ class ActivityPlugin : CordovaPlugin() {
             var result: PluginResult
             
             try {
-                val intent = Intent(cordova.getContext(), ConnectionActivity::class.java)
+                val intent = Intent(cordova.getContext(), ConnectSessionActivity::class.java)
 
                 cordova.setActivityResultCallback(this);
                 cordova.getActivity().startActivityForResult(intent, 100)

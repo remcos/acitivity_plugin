@@ -7,7 +7,7 @@
     </js-module>
 
     <platform name="android">
-        <source-file src="src/android/ConnectionActivity.kt" target-dir="src/main/kotlin" />
+        <source-file src="src/android/ConnectSessionActivity.kt" target-dir="src/main/kotlin" />
         <source-file src="src/android/ActivityPlugin.kt" target-dir="src/main/kotlin" />
 
 	    <config-file parent="/*" target="res/xml/config.xml">
@@ -23,7 +23,7 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:name="com.remcos.activityplugin.ConnectionActivity" android:theme="@style/Theme.AppCompat" />
+            <activity android:name="com.remcos.activityplugin.ConnectSessionActivity" android:theme="@style/Theme.AppCompat" />
         </config-file>  
     </platform>
 </plugin>
