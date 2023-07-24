@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.remcos.ActivityPlugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>JedlixPlugin</name>
+
+    <js-module name="ActivityPlugin" src="www/ActivityPlugin.js">
+        <clobbers target="cordova.plugins.ActivityPlugin" />
+    </js-module>
+
+    <platform name="android">
+        <framework src="com.jedlix:sdk:1.6.1" />	
+
+        <source-file src="src/android/Authentication.kt" target-dir="src/main/kotlin" />
+        <source-file src="src/android/DefaultAuthentication.kt" target-dir="src/main/kotlin" />
+        <source-file src="src/android/ConnectionsActivity.kt" target-dir="src/main/kotlin" />
+        <source-file src="src/android/ActivityPlugin.kt" target-dir="src/main/kotlin" />
+
+	    <config-file parent="/*" target="res/xml/config.xml">
+            <preference name="GradlePluginKotlinEnabled" value="true" />
+            <preference name="GradlePluginKotlinCodeStyle" value="official" />
+
+            <!-- <preference name="GradlePluginVersion" value="8.0.0" /> 
+            <preference name="GradlePluginKotlinVersion" value="1.8.10" /> -->
+
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.quatronic.jedlixplugin.ConnectionActivity" android:theme="@style/Theme.AppCompat" />
+        </config-file>  
+    </platform>
+</plugin>

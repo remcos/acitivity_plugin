@@ -1,0 +1,16 @@
+{
+  "name": "com.remcos.jedlixplugin",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "com.remcos.jedlixplugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "R. Snijders",
+  "license": "ISC"
+}
