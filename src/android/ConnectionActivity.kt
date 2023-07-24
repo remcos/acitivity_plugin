@@ -9,6 +9,9 @@ class ConnectionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val intent = Intent().also {
+            it.putExtra("resultMessage", "This is a test.")
+        }
         setResult(Activity.RESULT_OK, intent)
         finish()      
     }

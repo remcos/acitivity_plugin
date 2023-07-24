@@ -1,9 +1,9 @@
 {
-  "name": "com.remcos.jedlixplugin",
+  "name": "com.remcos.activityplugin",
   "version": "1.0.0",
   "description": "",
   "cordova": {
-    "id": "com.remcos.jedlixplugin",
+    "id": "com.remcos.activityplugin",
     "platforms": [
       "android"
     ]

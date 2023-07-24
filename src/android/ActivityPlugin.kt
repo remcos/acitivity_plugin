@@ -8,12 +8,7 @@ import org.apache.cordova.CordovaPlugin
 import org.apache.cordova.CallbackContext
 import org.apache.cordova.PluginResult
 
-class JedlixPlugin : CordovaPlugin() {
-    companion object {
-        lateinit var baseURL: URL
-        lateinit var apiKey: String
-        lateinit var authentication: DefaultAuthentication
-    }
+class ActivityPlugin : CordovaPlugin() {
 
     var callbackContext: CallbackContext? = null
 
@@ -46,7 +41,7 @@ class JedlixPlugin : CordovaPlugin() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
-        val result = PluginResult(PluginResult.Status.OK, "activity result received")
+        val result = PluginResult(PluginResult.Status.OK, data.getStringExtra("resultMessage")?:"")
         callbackContext?.sendPluginResult(result)
     }
 }
